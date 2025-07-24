@@ -1,5 +1,5 @@
 # Fortune Cookie
-Jesus
+
 Este projeto é uma aplicação web simples que exibe uma mensagem de fortuna ao usuário ao clicar em um botão. A aplicação é composta por um **backend em Rust** que acessa a API externa [https://api.adviceslip.com/advice](https://api.adviceslip.com/advice) para obter as mensagens de fortuna, e um **frontend em Nginx** que serve uma página estática. Os contêineres são gerenciados utilizando o Podman.
 
 ## Índice
