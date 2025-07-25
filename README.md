@@ -20,28 +20,44 @@ Este projeto é uma aplicação web simples que exibe uma mensagem de fortuna ao
 ## Estrutura do Projeto
 
 ```bash
-.
-├── backend
+argocd-alura/
+├── backend/
+│   ├── src/
+│   │   └── main.rs
 │   ├── Cargo.lock
 │   ├── Cargo.toml
+│   └── Dockerfile
+├── frontend/
 │   ├── Dockerfile
-│   └── src
-│       └── main.rs
-├── fortune_logs
-│   ├── backend
-│   │   └── fortune_backend.log
-│   └── frontend
-│       ├── access.log
-│       └── error.log
-└── frontend
-    ├── Dockerfile
-    ├── index.html
-    └── nginx.conf
+│   ├── index.html
+│   └── nginx.conf
+├── k8s-manifests/
+│   ├── backend-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── frontend-deployment.yaml
+│   ├── frontend-service.yaml
+│   └── ingress.yaml
+├── .gitignore
+├── LICENSE
+├── README.md
+└── minikube-linux-amd64
 ```
 
-- **backend/**: Código-fonte e Dockerfile do backend em Rust.
-- **frontend/**: Arquivos estáticos e Dockerfile do frontend em Nginx.
-- **fortune_logs/**: Diretório para armazenar os logs do backend e frontend.
+**backend/:** Código-fonte e Dockerfile do backend (Rust).
+
+**frontend/:** Arquivos estáticos e Dockerfile do frontend (Nginx).
+
+**k8s-manifests/:** Manifestos YAML do Kubernetes (deploy, service, ingress).
+
+**fortune_logs/:** Logs do backend e frontend.
+
+**.gitignore:** Arquivos ignorados pelo Git.
+
+**LICENSE:** Licença do projeto.
+
+**README.md:** Documentação principal.
+
+**minikube-linux-amd64:** Executável do Minikube.
 
 ---
 
